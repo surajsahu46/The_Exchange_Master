@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --exchange-corner: 0, 0, 0;
+  --exchange-corner-light: 0, 0, 0;
+  --exchange-corner-green: #14532d;
+  --exchange-corner-green-light: #14532d34;
+}
+
+html {
+  font-family: var(--font-inter);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+}
+
+*::-webkit-scrollbar-track {
+  border: 5px solid white;
+  border-radius: 10px;
+	background-color: var(--exchange-corner-green-light);
+}
+
+*::-webkit-scrollbar {
+	background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+	background-color: var(--exchange-corner-green);
+  border: 2px solid white;
+	border-radius: 5px;
+}
+
+.skeleton-fragment {
+  border-radius: 4px;
+  background: linear-gradient(90deg, #ccc 0px, rgb(229 229 229/90%) 40px, #ccc 80px);
+  background-size: 300%;
+  background-position: 100% 0;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
